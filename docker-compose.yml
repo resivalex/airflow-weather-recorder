@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  env:
+    image: python:3.9
+    working_dir: /app
+    command: sh install-and-start.sh
+    container_name: weather__app
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app

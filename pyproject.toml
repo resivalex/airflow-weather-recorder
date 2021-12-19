@@ -1,0 +1,9 @@
+[tool.poetry]
+name = "airflow-weather-recorder"
+version = "0.0.1"
+description = ""
+authors = ["Ivan Reshetnikov"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+apache-airflow  = "^2.2.2"  # Programmatically author, schedule and monitor data pipelines
