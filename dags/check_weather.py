@@ -1,6 +1,6 @@
 from datetime import datetime
-from pprint import pprint
 from airflow_weather_recorder.weather import get_city_wheather
+from airflow_weather_recorder.response_storage import save_record
 
 from airflow import DAG
 from airflow.operators.python import PythonOperator
@@ -15,7 +15,7 @@ with DAG(
 
     def check_weather():
         weather_info = get_city_wheather('Yaroslavl')
-        pprint(weather_info)
+        save_record(weather_info)
 
     root = PythonOperator(
         task_id='check_weather',

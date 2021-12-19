@@ -7,3 +7,5 @@ authors = ["Ivan Reshetnikov"]
 [tool.poetry.dependencies]
 python = "^3.9"
 apache-airflow  = "^2.2.2"  # Programmatically author, schedule and monitor data pipelines
+clickhouse-driver = "^0.2.2"  # Python driver with native interface for ClickHouse
+requests = "^2.26.0"  # Python HTTP for Humans

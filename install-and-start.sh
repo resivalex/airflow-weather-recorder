@@ -2,6 +2,7 @@
 
 pip install poetry
 poetry config virtualenvs.in-project true
+poetry update
 poetry install
 AIRFLOW_HOME='.' poetry run airflow standalone
 
