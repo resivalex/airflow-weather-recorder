@@ -28,9 +28,8 @@ def save_record(response: str):
         info['main']['feels_like'] + CELSIUS_ABSOLUTE_ZERO,
         info['wind']['speed']
     ]
-    print(record)
     client.execute('''
         INSERT INTO weather_log
         (timestamp, weather_name, temperature, feels_like_temperature, wind_speed)
         VALUES
-    ''', record, types_check=True)
+    ''', [record])
