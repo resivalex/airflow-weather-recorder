@@ -7,7 +7,7 @@ from airflow.operators.python import PythonOperator
 
 with DAG(
     dag_id='weather_python_operator',
-    schedule_interval='* * * * *',
+    schedule_interval='*/5 * * * *',
     start_date=datetime(2021, 1, 1),
     catchup=False,
     tags=['weather'],
